@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERDE V.1.0</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-main">
+            <div class="site-logo">
+                <div class="logo-icon">V</div>
+                <h1 class="logo-text">VERDE</h1>
+            </div>
+            <button class="post-ad-button">
+                <i class="fas fa-plus-circle"></i>
+                <span>Hızlı İlan Ver</span>
+            </button>
+                    <button class="theme-switcher">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="İlan, kategori veya konum ara...">
+                    <button class="search-button">Ara</button>
+                    <button class="filter-toggle"><i class="fas fa-sliders-h"></i> Filtreler</button>
+                </div>
+                <div class="advanced-filters">
+                    <div class="filter-section">
+                        <h3>Konum</h3>
+                        <select class="location-select">
+                            <option value="">Tüm Şehirler</option>
+                            <option value="istanbul">İstanbul</option>
+                            <option value="ankara">Ankara</option>
+                            <option value="izmir">İzmir</option>
+                        </select>
+                        <select class="district-select">
+                            <option value="">Tüm İlçeler</option>
+                        </select>
+                    </div>
+                    <div class="filter-section">
+                        <h3>Fiyat Aralığı</h3>
+                        <div class="price-range">
+                            <input type="number" placeholder="Min" class="price-input">
+                            <span>-</span>
+                            <input type="number" placeholder="Max" class="price-input">
+                            <select class="currency-select">
+                                <option value="TL">TL</option>
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-section">
+                        <h3>Özellikler</h3>
+                        <div class="property-filters">
+                            <label><input type="checkbox" value="acil"> Acil</label>
+                            <label><input type="checkbox" value="son24saat"> Son 24 Saat</label>
+                            <label><input type="checkbox" value="pazarlik"> Pazarlıklı</label>
+                            <label><input type="checkbox" value="krediye-uygun"> Krediye Uygun</label>
+                        </div>
+                    </div>
+                    <div class="filter-actions">
+                        <button class="apply-filters">Filtrele</button>
+                        <button class="clear-filters">Temizle</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <a href="mesajlar.html" class="header-icon">
+                    <i class="fas fa-comments"></i>
+                    <span class="notification-badge">2</span>
+                </a>
+                <a href="#notifications" class="header-icon" id="notificationBtn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">5</span>
+                </a>
+                
+                <!-- Bildirim Dropdown -->
+                <div class="notification-dropdown" id="notificationDropdown">
+                    <div class="notification-header">
+                        <h3>Bildirimler</h3>
+                        <button class="mark-all-read">Tümünü Okundu İşaretle</button>
+                    </div>
+                    <div class="notification-list">
+                        <div class="notification-item unread">
+                            <div class="notification-icon">
+                                <i class="fas fa-heart" style="color: var(--danger);"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p class="notification-text">İlanınız favorilere eklendi</p>
+                                <span class="notification-time">5 dakika önce</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item unread">
+                            <div class="notification-icon">
+                                <i class="fas fa-comment" style="color: var(--primary);"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p class="notification-text">Yeni mesajınız var</p>
+                                <span class="notification-time">15 dakika önce</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item unread">
+                            <div class="notification-icon">
+                                <i class="fas fa-tag" style="color: var(--warning);"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p class="notification-text">İlanınıza yeni teklif geldi</p>
+                                <span class="notification-time">1 saat önce</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item">
+                            <div class="notification-icon">
+                                <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p class="notification-text">İlanınız onaylandı</p>
+                                <span class="notification-time">3 saat önce</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item">
+                            <div class="notification-icon">
+                                <i class="fas fa-star" style="color: var(--warning);"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p class="notification-text">İlanınız öne çıkarıldı</p>
+                                <span class="notification-time">1 gün önce</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notification-footer">
+                        <a href="#all-notifications">Tüm Bildirimleri Gör</a>
+                    </div>
+                </div>
+                <a href="favorilerim.html" class="header-icon">
+                    <i class="fas fa-heart"></i>
+                    <span class="notification-badge">12</span>
+                </a>
+                <div class="user-menu">
+                    <button class="user-button">
+                        <img src="https://placehold.co/32x32" alt="Profil" class="avatar">
+                        <span>Hesabım</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="user-dropdown">
+                        <div class="user-info">
+                            <img src="https://placehold.co/40x40" alt="Profil" class="user-avatar">
+                            <div class="user-details">
+                                <span class="user-name">Kullanıcı Adı</span>
+                                <span class="user-email">kullanici@example.com</span>
+                            </div>
+                        </div>
+                        <hr class="dropdown-divider">
+                        <a href="profil.html" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            <span>Profilim</span>
+                        </a>
+                        <a href="ilanlarim.html" class="dropdown-item">
+                            <i class="fas fa-list"></i>
+                            <span>İlanlarım</span>
+                        </a>
+                        <a href="favorilerim.html" class="dropdown-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Favorilerim</span>
+                        </a>
+                        <a href="mesajlar.html" class="dropdown-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Mesajlarım</span>
+                            <span class="notification-count">2</span>
+                        </a>
+                        <a href="#transactions" class="dropdown-item">
+                            <i class="fas fa-credit-card"></i>
+                            <span>İşlemlerim</span>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="ayarlar.html" class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Ayarlar</span>
+                        </a>
+                        <a href="#help" class="dropdown-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Yardım</span>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="#logout" class="dropdown-item logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Çıkış Yap</span>
+                        </a>
+                    </div>
+            </div>
+        </div>
+
+            <!-- Kategori ve Hızlı Erişim Sistemi geçici olarak kaldırıldı -->
+
+                <!-- Hızlı İlan Verme Modal -->
+                <div class="modal" id="postAdModal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Hızlı İlan Ver</h2>
+                            <button class="close-modal">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="quickPostForm" class="post-ad-form">
+                                <div class="form-group">
+                                    <label for="adTitle">İlan Başlığı</label>
+                                    <input type="text" id="adTitle" required placeholder="İlanınız için dikkat çekici bir başlık">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="adCategory">Kategori</label>
+                                    <select id="adCategory" required>
+                                        <option value="">Kategori Seçin</option>
+                                        <option value="emlak">Emlak</option>
+                                        <option value="vasita">Vasıta</option>
+                                        <option value="elektronik">Elektronik</option>
+                                        <option value="ev-esyalari">Ev Eşyaları</option>
+                                    </select>
+                                </div>
+                            
+                                <div class="form-group price-group">
+                                    <label for="adPrice">Fiyat</label>
+                                    <div class="price-input-group">
+                                        <input type="number" id="adPrice" required placeholder="Fiyat">
+                                        <select id="adCurrency">
+                                            <option value="TL">TL</option>
+                                            <option value="USD">USD</option>
+                                            <option value="EUR">EUR</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="adDescription">Açıklama</label>
+                                    <textarea id="adDescription" required placeholder="İlanınız hakkında detaylı bilgi verin"></textarea>
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label class="upload-label">
+                                        <i class="fas fa-camera"></i>
+                                        <span>Fotoğraf Ekle</span>
+                                        <input type="file" id="adPhotos" multiple accept="image/*">
+                                    </label>
+                                    <div id="imagePreview" class="image-preview"></div>
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="adLocation">Konum</label>
+                                    <input type="text" id="adLocation" required placeholder="İlan konumu">
+                                </div>
+                            
+                                <div class="form-actions">
+                                    <button type="submit" class="submit-ad">İlanı Yayınla</button>
+                                    <button type="button" class="cancel-ad">İptal</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- Gelişmiş Filtre Paneli -->
+        <div class="filter-panel" id="filterPanel">
+            <div class="filter-section">
+                <h3>Konum</h3>
+                <div class="location-picker">
+                    <select class="select-box">
+                        <option>İl Seçin</option>
+                        <option>İstanbul</option>
+                        <option>Ankara</option>
+                        <option>İzmir</option>
+                    </select>
+                    <select class="select-box">
+                        <option>İlçe Seçin</option>
+                        <option>Kadıköy</option>
+                        <option>Beşiktaş</option>
+                        <option>Üsküdar</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Fiyat Aralığı</h3>
+                <div class="price-range">
+                    <input type="number" placeholder="Min" class="price-input">
+                    <span>-</span>
+                    <input type="number" placeholder="Max" class="price-input">
+                    <select class="select-box">
+                        <option>TL</option>
+                        <option>USD</option>
+                        <option>EUR</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Özellikler</h3>
+                <div class="feature-filters">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Acil
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Son 24 Saat
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Fotoğraflı
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-actions">
+                <button class="btn-secondary">Temizle</button>
+                <button class="btn-primary">Filtreleri Uygula</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Ana İçerik -->
+    <main class="main-content">
+        <!-- Kategoriler -->
+        <section class="categories-section">
+            <div class="category-grid">
+                <a href="#" class="category-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Konut</h3>
+                    <p>12,543 ilan</p>
+                </a>
+                <a href="#" class="category-card">
+                    <i class="fas fa-car"></i>
+                    <h3>Vasıta</h3>
+                    <p>8,321 ilan</p>
+                </a>
+                <a href="#" class="category-card">
+                    <i class="fas fa-building"></i>
+                    <h3>İş Yeri</h3>
+                    <p>3,210 ilan</p>
+                </a>
+                <a href="#" class="category-card">
+                    <i class="fas fa-couch"></i>
+                    <h3>Ev Eşyası</h3>
+                    <p>15,678 ilan</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Vitrin İlanları -->
+        <section class="featured-listings">
+            <div class="section-header">
+                <h2>Vitrin İlanları</h2>
+                <div class="view-controls">
+                    <button class="view-button active"><i class="fas fa-th-large"></i></button>
+                    <button class="view-button"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+
+            <div class="listings-grid">
+                <!-- Dinamik olarak JS ile doldurulacak -->
+            </div>
+                
+            </div>
+            
+            <!-- Sayfalama -->
+            <div class="pagination">
+                <button class="prev" disabled><i class="fas fa-chevron-left"></i></button>
+                <button class="page-number active">1</button>
+                <button class="page-number" onclick="window.location.href='sayfa2.html'">2</button>
+                <button class="page-number">3</button>
+                <button class="page-number">4</button>
+                <button class="page-number">5</button>
+                <button class="page-number">6</button>
+                <button class="next" onclick="window.location.href='sayfa2.html'"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Hızlı İlan Verme Butonu -->
+    <button class="post-ad-fab">
+        <i class="fas fa-plus"></i>
+        <span>İlan Ver</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

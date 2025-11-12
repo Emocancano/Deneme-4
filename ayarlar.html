@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayarlar - VERDE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-main">
+            <a href="index.html" class="site-logo">VERDE</a>
+            <button class="post-ad-button">
+                <i class="fas fa-plus-circle"></i>
+                <span>Hızlı İlan Ver</span>
+            </button>
+            <button class="theme-switcher">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="İlan, kategori veya konum ara...">
+                </div>
+            </div>
+
+            <!-- Kullanıcı Menüsü -->
+            <div class="user-menu">
+                <button class="user-menu-btn">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Hesabım</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="user-dropdown">
+                    <a href="profil.html" class="dropdown-item">
+                        <i class="fas fa-user"></i>
+                        <span>Profilim</span>
+                    </a>
+                    <a href="ilanlarim.html" class="dropdown-item">
+                        <i class="fas fa-list-alt"></i>
+                        <span>İlanlarım</span>
+                    </a>
+                    <a href="favorilerim.html" class="dropdown-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Favorilerim</span>
+                    </a>
+                    <a href="mesajlar.html" class="dropdown-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Mesajlarım</span>
+                    </a>
+                    <a href="ayarlar.html" class="dropdown-item active">
+                        <i class="fas fa-cog"></i>
+                        <span>Ayarlar</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Çıkış Yap</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Ayarlar Sayfası İçeriği -->
+    <main class="settings-page">
+        <div class="container">
+            <!-- Sayfa Başlığı -->
+            <div class="page-header">
+                <div class="header-content">
+                    <h1><i class="fas fa-cog"></i> Hesap Ayarları</h1>
+                    <p class="header-subtitle">Hesabınızı yönetin, güvenlik ve gizlilik ayarlarınızı düzenleyin</p>
+                </div>
+            </div>
+
+            <div class="settings-container">
+                <!-- Ayarlar Menüsü -->
+                <div class="settings-sidebar">
+                    <nav class="settings-nav">
+                        <a href="#account" class="nav-item active">
+                            <i class="fas fa-user"></i>
+                            <span>Hesap Bilgileri</span>
+                        </a>
+                        <a href="#security" class="nav-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Güvenlik</span>
+                        </a>
+                        <a href="#privacy" class="nav-item">
+                            <i class="fas fa-lock"></i>
+                            <span>Gizlilik</span>
+                        </a>
+                        <a href="#notifications" class="nav-item">
+                            <i class="fas fa-bell"></i>
+                            <span>Bildirimler</span>
+                        </a>
+                        <a href="#appearance" class="nav-item">
+                            <i class="fas fa-palette"></i>
+                            <span>Görünüm</span>
+                        </a>
+                        <a href="#subscription" class="nav-item">
+                            <i class="fas fa-crown"></i>
+                            <span>Premium</span>
+                        </a>
+                        <a href="#data" class="nav-item">
+                            <i class="fas fa-download"></i>
+                            <span>Veri Yönetimi</span>
+                        </a>
+                    </nav>
+                </div>
+
+                <!-- Ayarlar İçeriği -->
+                <div class="settings-content">
+                    <!-- Hesap Bilgileri -->
+                    <div id="account" class="settings-section active">
+                        <div class="section-header">
+                            <h2>Hesap Bilgileri</h2>
+                            <p>Kişisel bilgilerinizi güncelleyin</p>
+                        </div>
+
+                        <div class="settings-card">
+                            <div class="profile-picture-section">
+                                <div class="profile-picture">
+                                    <img src="https://via.placeholder.com/120x120/10b981/ffffff?text=U" alt="Profil Fotoğrafı" id="settingsProfileImage">
+                                </div>
+                                <div class="picture-actions">
+                                    <button class="btn-secondary" onclick="document.getElementById('profilePictureInput').click()">
+                                        <i class="fas fa-camera"></i>
+                                        Fotoğraf Değiştir
+                                    </button>
+                                    <button class="btn-danger-outline">
+                                        <i class="fas fa-trash"></i>
+                                        Kaldır
+                                    </button>
+                                    <input type="file" id="profilePictureInput" accept="image/*" style="display: none;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Kişisel Bilgiler</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Ad</label>
+                                    <input type="text" value="Ahmet">
+                                </div>
+                                <div class="form-group">
+                                    <label>Soyad</label>
+                                    <input type="text" value="Yılmaz">
+                                </div>
+                                <div class="form-group">
+                                    <label>E-posta</label>
+                                    <input type="email" value="ahmet.yilmaz@email.com">
+                                    <span class="input-note verified">
+                                        <i class="fas fa-check-circle"></i> Doğrulanmış
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Telefon</label>
+                                    <input type="tel" value="+90 555 123 4567">
+                                    <span class="input-note verified">
+                                        <i class="fas fa-check-circle"></i> Doğrulanmış
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Doğum Tarihi</label>
+                                    <input type="date" value="1990-05-15">
+                                </div>
+                                <div class="form-group">
+                                    <label>Cinsiyet</label>
+                                    <select>
+                                        <option>Erkek</option>
+                                        <option>Kadın</option>
+                                        <option>Belirtmek İstemiyorum</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button class="btn-primary">
+                                    <i class="fas fa-save"></i>
+                                    Değişiklikleri Kaydet
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Güvenlik -->
+                    <div id="security" class="settings-section">
+                        <div class="section-header">
+                            <h2>Güvenlik Ayarları</h2>
+                            <p>Hesabınızı güvende tutun</p>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Şifre Değiştir</h3>
+                            <div class="form-group">
+                                <label>Mevcut Şifre</label>
+                                <div class="password-input">
+                                    <input type="password" placeholder="Mevcut şifrenizi girin">
+                                    <button type="button" class="toggle-password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Yeni Şifre</label>
+                                <div class="password-input">
+                                    <input type="password" placeholder="Yeni şifrenizi girin">
+                                    <button type="button" class="toggle-password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-strength">
+                                    <div class="strength-bar">
+                                        <div class="strength-fill weak"></div>
+                                    </div>
+                                    <span class="strength-text">Zayıf</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Yeni Şifre (Tekrar)</label>
+                                <div class="password-input">
+                                    <input type="password" placeholder="Yeni şifrenizi tekrar girin">
+                                    <button type="button" class="toggle-password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="btn-primary">
+                                <i class="fas fa-key"></i>
+                                Şifreyi Güncelle
+                            </button>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>İki Faktörlü Kimlik Doğrulama</h3>
+                            <div class="toggle-setting">
+                                <div class="setting-info">
+                                    <h4>SMS ile Doğrulama</h4>
+                                    <p>Giriş yaparken telefonunuza kod gönderilir</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-setting">
+                                <div class="setting-info">
+                                    <h4>E-posta ile Doğrulama</h4>
+                                    <p>Giriş yaparken e-postanıza kod gönderilir</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Aktif Oturumlar</h3>
+                            <div class="session-item current">
+                                <div class="session-info">
+                                    <div class="session-device">
+                                        <i class="fas fa-desktop"></i>
+                                        <span>Windows 11 - Chrome</span>
+                                        <span class="current-badge">Mevcut</span>
+                                    </div>
+                                    <div class="session-details">
+                                        <span>İstanbul, Türkiye</span>
+                                        <span>Son etkinlik: Şimdi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="session-item">
+                                <div class="session-info">
+                                    <div class="session-device">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <span>iPhone - Safari</span>
+                                    </div>
+                                    <div class="session-details">
+                                        <span>İstanbul, Türkiye</span>
+                                        <span>Son etkinlik: 2 saat önce</span>
+                                    </div>
+                                </div>
+                                <button class="btn-danger-outline">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    Çıkış Yap
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gizlilik -->
+                    <div id="privacy" class="settings-section">
+                        <div class="section-header">
+                            <h2>Gizlilik Ayarları</h2>
+                            <p>Kimler sizi görebilir ve size ulaşabilir</p>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Profil Görünürlüğü</h3>
+                            <div class="toggle-setting">
+                                <div class="setting-info">
+                                    <h4>Profilimi Herkese Göster</h4>
+                                    <p>Kullanıcılar profilinizi görüntüleyebilir</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-setting">
+                                <div class="setting-info">
+                                    <h4>İletişim Bilgilerimi Göster</h4>
+                                    <p>Telefon numaranız ilan detayında görünür</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-setting">
+                                <div class="setting-info">
+                                    <h4>Çevrimiçi Durumumu Göster</h4>
+                                    <p>Diğer kullanıcılar ne zaman aktif olduğunuzu görebilir</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Mesaj Ayarları</h3>
+                            <div class="radio-group">
+                                <div class="radio-item">
+                                    <input type="radio" id="messages-all" name="message-privacy" checked>
+                                    <label for="messages-all">Herkes mesaj gönderebilir</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="messages-verified" name="message-privacy">
+                                    <label for="messages-verified">Sadece doğrulanmış kullanıcılar</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="messages-none" name="message-privacy">
+                                    <label for="messages-none">Kimse mesaj gönderemesin</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bildirimler -->
+                    <div id="notifications" class="settings-section">
+                        <div class="section-header">
+                            <h2>Bildirim Ayarları</h2>
+                            <p>Hangi bildirimleri almak istediğinizi seçin</p>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>E-posta Bildirimleri</h3>
+                            <div class="toggle-setting">
+                                <div class="setting-info">
+                                    <h4>Yeni Mesajlar</h4>
+                                    <p>Yeni mesaj aldığınızda e-posta gönderilir</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-setting">
+                                <div class="setting-info">
+                                    <h4>Fiyat Değişiklikleri</h4>
+                                    <p>Favori ilanlarınızın fiyatı değiştiğinde bildirim alın</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-setting">
+                                <div class="setting-info">
+                                    <h4>İlan Güncellemeleri</h4>
+                                    <p>İlanlarınızla ilgili önemli güncellemeler</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Mobil Bildirimler</h3>
+                            <div class="toggle-setting">
+                                <div class="setting-info">
+                                    <h4>Push Bildirimleri</h4>
+                                    <p>Telefonunuza anlık bildirimler gönderin</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Pazarlama Bildirimleri</h3>
+                            <div class="toggle-setting">
+                                <div class="setting-info">
+                                    <h4>Kampanyalar ve İndirimler</h4>
+                                    <p>Özel teklifler ve kampanyalardan haberdar olun</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Görünüm -->
+                    <div id="appearance" class="settings-section">
+                        <div class="section-header">
+                            <h2>Görünüm Ayarları</h2>
+                            <p>Site görünümünü kişiselleştirin</p>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Tema</h3>
+                            <div class="theme-options">
+                                <div class="theme-option active" data-theme="light">
+                                    <div class="theme-preview light">
+                                        <div class="preview-header"></div>
+                                        <div class="preview-content"></div>
+                                    </div>
+                                    <span>Açık Tema</span>
+                                </div>
+                                <div class="theme-option" data-theme="dark">
+                                    <div class="theme-preview dark">
+                                        <div class="preview-header"></div>
+                                        <div class="preview-content"></div>
+                                    </div>
+                                    <span>Koyu Tema</span>
+                                </div>
+                                <div class="theme-option" data-theme="auto">
+                                    <div class="theme-preview auto">
+                                        <div class="preview-header"></div>
+                                        <div class="preview-content"></div>
+                                    </div>
+                                    <span>Sistem</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Dil ve Bölge</h3>
+                            <div class="form-group">
+                                <label>Dil</label>
+                                <select>
+                                    <option selected>Türkçe</option>
+                                    <option>English</option>
+                                    <option>العربية</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Para Birimi</label>
+                                <select>
+                                    <option selected>TL (Türk Lirası)</option>
+                                    <option>USD (Amerikan Doları)</option>
+                                    <option>EUR (Euro)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Premium -->
+                    <div id="subscription" class="settings-section">
+                        <div class="section-header">
+                            <h2>Premium Üyelik</h2>
+                            <p>Daha fazla özellik için premium'a geçin</p>
+                        </div>
+
+                        <div class="premium-card">
+                            <div class="premium-header">
+                                <i class="fas fa-crown"></i>
+                                <h3>Premium Üyelik</h3>
+                                <span class="premium-badge">Aktif</span>
+                            </div>
+                            <div class="premium-benefits">
+                                <div class="benefit-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Sınırsız ilan verme</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>İlanları öne çıkarma</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Öncelikli müşteri desteği</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Detaylı istatistikler</span>
+                                </div>
+                            </div>
+                            <div class="premium-info">
+                                <p><strong>Sonraki ödeme:</strong> 15 Kasım 2025</p>
+                                <p><strong>Plan:</strong> Aylık Premium - 29.99 TL</p>
+                            </div>
+                            <div class="premium-actions">
+                                <button class="btn-primary">
+                                    <i class="fas fa-credit-card"></i>
+                                    Planı Yönet
+                                </button>
+                                <button class="btn-danger-outline">
+                                    <i class="fas fa-times"></i>
+                                    Üyeliği İptal Et
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Veri Yönetimi -->
+                    <div id="data" class="settings-section">
+                        <div class="section-header">
+                            <h2>Veri Yönetimi</h2>
+                            <p>Verilerinizi yönetin ve hesabınızı kontrol edin</p>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Veri İndirme</h3>
+                            <p>Hesabınızdaki tüm verilerin bir kopyasını indirin</p>
+                            <button class="btn-secondary">
+                                <i class="fas fa-download"></i>
+                                Verilerimi İndir
+                            </button>
+                        </div>
+
+                        <div class="settings-card danger-zone">
+                            <h3>Tehlikeli Alan</h3>
+                            <div class="danger-actions">
+                                <div class="danger-action">
+                                    <div class="action-info">
+                                        <h4>Hesabı Devre Dışı Bırak</h4>
+                                        <p>Hesabınızı geçici olarak devre dışı bırakır</p>
+                                    </div>
+                                    <button class="btn-warning">
+                                        <i class="fas fa-pause"></i>
+                                        Hesabı Duraklat
+                                    </button>
+                                </div>
+                                <div class="danger-action">
+                                    <div class="action-info">
+                                        <h4>Hesabı Kalıcı Sil</h4>
+                                        <p>Tüm verileriniz kalıcı olarak silinir</p>
+                                    </div>
+                                    <button class="btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                        Hesabı Sil
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

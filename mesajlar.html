@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesajlarım - VERDE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-main">
+            <a href="index.html" class="site-logo">VERDE</a>
+            <button class="post-ad-button">
+                <i class="fas fa-plus-circle"></i>
+                <span>Hızlı İlan Ver</span>
+            </button>
+            <button class="theme-switcher">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="İlan, kategori veya konum ara...">
+                </div>
+            </div>
+
+            <!-- Kullanıcı Menüsü -->
+            <div class="user-menu">
+                <button class="user-menu-btn">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Hesabım</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="user-dropdown">
+                    <a href="profil.html" class="dropdown-item">
+                        <i class="fas fa-user"></i>
+                        <span>Profilim</span>
+                    </a>
+                    <a href="ilanlarim.html" class="dropdown-item">
+                        <i class="fas fa-list-alt"></i>
+                        <span>İlanlarım</span>
+                    </a>
+                    <a href="favorilerim.html" class="dropdown-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Favorilerim</span>
+                    </a>
+                    <a href="mesajlar.html" class="dropdown-item active">
+                        <i class="fas fa-envelope"></i>
+                        <span>Mesajlarım</span>
+                    </a>
+                    <a href="ayarlar.html" class="dropdown-item">
+                        <i class="fas fa-cog"></i>
+                        <span>Ayarlar</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Çıkış Yap</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mesajlarım Sayfası İçeriği -->
+    <main class="messages-page">
+        <div class="container">
+            <!-- Sayfa Başlığı -->
+            <div class="page-header">
+                <div class="header-content">
+                    <h1><i class="fas fa-envelope"></i> Mesajlarım</h1>
+                    <p class="header-subtitle">İlan sahipleri ile iletişime geçin ve sorularınızı sorun</p>
+                </div>
+                <div class="message-actions">
+                    <button class="mark-all-read-btn">
+                        <i class="fas fa-check-double"></i>
+                        Tümünü Okundu İşaretle
+                    </button>
+                    <button class="delete-all-btn">
+                        <i class="fas fa-trash-alt"></i>
+                        Seçilenleri Sil
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mesajlaşma Arayüzü -->
+            <div class="messages-container">
+                <!-- Konuşma Listesi -->
+                <div class="conversations-list">
+                    <div class="conversations-header">
+                        <h3>Konuşmalar</h3>
+                        <div class="conversation-filters">
+                            <button class="filter-btn active" data-filter="all">
+                                Tümü (15)
+                            </button>
+                            <button class="filter-btn" data-filter="unread">
+                                Okunmamış (3)
+                            </button>
+                            <button class="filter-btn" data-filter="important">
+                                Önemli (2)
+                            </button>
+                        </div>
+                        <div class="conversation-search">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Konuşmalarda ara...">
+                        </div>
+                    </div>
+
+                    <div class="conversations">
+                        <!-- Aktif Konuşma -->
+                        <div class="conversation-item active" data-conversation="1" data-status="unread">
+                            <div class="conversation-avatar">
+                                <img src="https://via.placeholder.com/50x50/10b981/ffffff?text=AK" alt="Kullanıcı">
+                                <div class="online-indicator"></div>
+                            </div>
+                            <div class="conversation-content">
+                                <div class="conversation-header-info">
+                                    <h4>Ahmet Kılıç</h4>
+                                    <span class="message-time">14:32</span>
+                                </div>
+                                <p class="last-message">Villa için son fiyatınız nedir?</p>
+                                <div class="conversation-meta">
+                                    <span class="ad-title">Bahçeli Müstakil Villa</span>
+                                    <div class="conversation-badges">
+                                        <span class="unread-count">2</span>
+                                        <i class="fas fa-star favorite-conversation"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diğer Konuşmalar -->
+                        <div class="conversation-item" data-conversation="2" data-status="read">
+                            <div class="conversation-avatar">
+                                <img src="https://via.placeholder.com/50x50/ef4444/ffffff?text=MÖ" alt="Kullanıcı">
+                            </div>
+                            <div class="conversation-content">
+                                <div class="conversation-header-info">
+                                    <h4>Mehmet Özkan</h4>
+                                    <span class="message-time">Dün</span>
+                                </div>
+                                <p class="last-message">Araç görülebilir mi?</p>
+                                <div class="conversation-meta">
+                                    <span class="ad-title">2020 BMW 3 Serisi</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="conversation-item" data-conversation="3" data-status="unread">
+                            <div class="conversation-avatar">
+                                <img src="https://via.placeholder.com/50x50/f59e0b/ffffff?text=SY" alt="Kullanıcı">
+                            </div>
+                            <div class="conversation-content">
+                                <div class="conversation-header-info">
+                                    <h4>Selin Yılmaz</h4>
+                                    <span class="message-time">2 gün önce</span>
+                                </div>
+                                <p class="last-message">Laptop hala satılık mı?</p>
+                                <div class="conversation-meta">
+                                    <span class="ad-title">MacBook Pro M3</span>
+                                    <div class="conversation-badges">
+                                        <span class="unread-count">1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="conversation-item" data-conversation="4" data-status="read">
+                            <div class="conversation-avatar">
+                                <img src="https://via.placeholder.com/50x50/0ea5e9/ffffff?text=EK" alt="Kullanıcı">
+                            </div>
+                            <div class="conversation-content">
+                                <div class="conversation-header-info">
+                                    <h4>Emre Koç</h4>
+                                    <span class="message-time">3 gün önce</span>
+                                </div>
+                                <p class="last-message">Koltuk takımı çok güzel görünüyor</p>
+                                <div class="conversation-meta">
+                                    <span class="ad-title">Chester Koltuk Takımı</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mesaj Detay Alanı -->
+                <div class="message-detail">
+                    <div class="message-header">
+                        <div class="contact-info">
+                            <img src="https://via.placeholder.com/40x40/10b981/ffffff?text=AK" alt="Ahmet Kılıç">
+                            <div class="contact-details">
+                                <h4>Ahmet Kılıç</h4>
+                                <span class="contact-status">Çevrimiçi</span>
+                            </div>
+                        </div>
+                        <div class="message-actions-header">
+                            <button class="header-action-btn" title="Telefon">
+                                <i class="fas fa-phone"></i>
+                            </button>
+                            <button class="header-action-btn" title="Bilgi">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                            <button class="header-action-btn" title="Engelle">
+                                <i class="fas fa-ban"></i>
+                            </button>
+                            <button class="header-action-btn" title="Şikayet Et">
+                                <i class="fas fa-flag"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- İlan Bilgisi -->
+                    <div class="ad-reference">
+                        <img src="https://via.placeholder.com/60x60/10b981/ffffff?text=Villa" alt="İlan">
+                        <div class="ad-info">
+                            <h5>Bahçeli Müstakil Villa</h5>
+                            <p>5.225.000 TL - Bursa, Nilüfer</p>
+                        </div>
+                        <button class="view-ad-btn">
+                            <i class="fas fa-external-link-alt"></i>
+                            İlanı Gör
+                        </button>
+                    </div>
+
+                    <!-- Mesajlar -->
+                    <div class="messages-content">
+                        <div class="message received">
+                            <div class="message-avatar">
+                                <img src="https://via.placeholder.com/30x30/10b981/ffffff?text=AK" alt="Ahmet Kılıç">
+                            </div>
+                            <div class="message-bubble">
+                                <p>Merhaba, villa hakkında bilgi almak istiyorum. Müsait misiniz?</p>
+                                <span class="message-time">14:15</span>
+                            </div>
+                        </div>
+
+                        <div class="message sent">
+                            <div class="message-bubble">
+                                <p>Merhaba! Tabii ki, nasıl yardımcı olabilirim?</p>
+                                <span class="message-time">14:18</span>
+                                <i class="fas fa-check-double message-status read"></i>
+                            </div>
+                        </div>
+
+                        <div class="message received">
+                            <div class="message-avatar">
+                                <img src="https://via.placeholder.com/30x30/10b981/ffffff?text=AK" alt="Ahmet Kılıç">
+                            </div>
+                            <div class="message-bubble">
+                                <p>Villa için son fiyatınız nedir? Pazarlık payı var mı?</p>
+                                <span class="message-time">14:32</span>
+                            </div>
+                        </div>
+
+                        <div class="message received unread">
+                            <div class="message-avatar">
+                                <img src="https://via.placeholder.com/30x30/10b981/ffffff?text=AK" alt="Ahmet Kılıç">
+                            </div>
+                            <div class="message-bubble">
+                                <p>Ayrıca villayı yarın görmeye gelebilir miyim?</p>
+                                <span class="message-time">14:33</span>
+                            </div>
+                        </div>
+
+                        <!-- Yazıyor Göstergesi -->
+                        <div class="typing-indicator">
+                            <div class="typing-avatar">
+                                <img src="https://via.placeholder.com/30x30/10b981/ffffff?text=AK" alt="Ahmet Kılıç">
+                            </div>
+                            <div class="typing-animation">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mesaj Gönderme Alanı -->
+                    <div class="message-input-area">
+                        <div class="input-tools">
+                            <button class="input-tool" title="Emoji">
+                                <i class="fas fa-smile"></i>
+                            </button>
+                            <button class="input-tool" title="Dosya Ekle">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <button class="input-tool" title="Resim Ekle">
+                                <i class="fas fa-image"></i>
+                            </button>
+                        </div>
+                        <div class="input-container">
+                            <textarea placeholder="Mesajınızı yazın..." rows="1"></textarea>
+                            <button class="send-btn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="quick-replies">
+                            <button class="quick-reply">Merhaba</button>
+                            <button class="quick-reply">Teşekkürler</button>
+                            <button class="quick-reply">Görüşmeye gelebilir miyim?</button>
+                            <button class="quick-reply">Son fiyatınız nedir?</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boş Durum -->
+            <div class="empty-messages" style="display: none;">
+                <div class="empty-icon">
+                    <i class="fas fa-envelope-open"></i>
+                </div>
+                <h3>Henüz mesajınız yok</h3>
+                <p>İlan sahipleri ile iletişime geçtiğinizde mesajlarınız burada görünecek.</p>
+                <a href="index.html" class="btn-primary">
+                    <i class="fas fa-search"></i>
+                    İlan Ara
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

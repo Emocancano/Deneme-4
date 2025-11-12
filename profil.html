@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profilim - VERDE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-main">
+            <a href="index.html" class="site-logo">VERDE</a>
+            <button class="post-ad-button">
+                <i class="fas fa-plus-circle"></i>
+                <span>Hızlı İlan Ver</span>
+            </button>
+            <button class="theme-switcher">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="İlan, kategori veya konum ara...">
+                </div>
+            </div>
+
+            <!-- Kullanıcı Menüsü -->
+            <div class="user-menu">
+                <button class="user-menu-btn">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Hesabım</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="user-dropdown">
+                    <a href="profil.html" class="dropdown-item active">
+                        <i class="fas fa-user"></i>
+                        <span>Profilim</span>
+                    </a>
+                    <a href="ilanlarim.html" class="dropdown-item">
+                        <i class="fas fa-list-alt"></i>
+                        <span>İlanlarım</span>
+                    </a>
+                    <a href="favorilerim.html" class="dropdown-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Favorilerim</span>
+                    </a>
+                    <a href="mesajlar.html" class="dropdown-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Mesajlarım</span>
+                    </a>
+                    <a href="ayarlar.html" class="dropdown-item">
+                        <i class="fas fa-cog"></i>
+                        <span>Ayarlar</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Çıkış Yap</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Profil Sayfası İçeriği -->
+    <main class="profile-page">
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="https://via.placeholder.com/150x150/10b981/ffffff?text=U" alt="Profil Fotoğrafı" id="profileImage">
+                    <button class="change-avatar-btn">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                    <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+                </div>
+                <div class="profile-info">
+                    <h1 class="profile-name">Ahmet Yılmaz</h1>
+                    <p class="profile-title">Premium Üye</p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Aktif İlan</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">45</span>
+                            <span class="stat-label">Toplam İlan</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.8</span>
+                            <span class="stat-label">Değerlendirme</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-sidebar">
+                    <nav class="profile-nav">
+                        <a href="#personal-info" class="nav-item active">
+                            <i class="fas fa-user"></i>
+                            <span>Kişisel Bilgiler</span>
+                        </a>
+                        <a href="ilanlarim.html" class="nav-item">
+                            <i class="fas fa-list-alt"></i>
+                            <span>İlanlarım</span>
+                        </a>
+                        <a href="favorilerim.html" class="nav-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Favorilerim</span>
+                        </a>
+                        <a href="mesajlar.html" class="nav-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Mesajlarım</span>
+                        </a>
+                        <a href="#reviews" class="nav-item">
+                            <i class="fas fa-star"></i>
+                            <span>Değerlendirmeler</span>
+                        </a>
+                        <a href="ayarlar.html" class="nav-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Hesap Ayarları</span>
+                        </a>
+                    </nav>
+                </div>
+
+                <div class="profile-main">
+                    <!-- Kişisel Bilgiler Sekmesi -->
+                    <div id="personal-info" class="tab-content active">
+                        <div class="section-header">
+                            <h2>Kişisel Bilgiler</h2>
+                            <button class="edit-btn">
+                                <i class="fas fa-edit"></i>
+                                Düzenle
+                            </button>
+                        </div>
+
+                        <div class="info-grid">
+                            <div class="info-group">
+                                <label>Ad Soyad</label>
+                                <input type="text" value="Ahmet Yılmaz" readonly>
+                            </div>
+                            <div class="info-group">
+                                <label>E-posta</label>
+                                <input type="email" value="ahmet.yilmaz@email.com" readonly>
+                            </div>
+                            <div class="info-group">
+                                <label>Telefon</label>
+                                <input type="tel" value="+90 555 123 4567" readonly>
+                            </div>
+                            <div class="info-group">
+                                <label>Doğum Tarihi</label>
+                                <input type="date" value="1990-05-15" readonly>
+                            </div>
+                            <div class="info-group">
+                                <label>Şehir</label>
+                                <select disabled>
+                                    <option>İstanbul</option>
+                                    <option>Ankara</option>
+                                    <option>İzmir</option>
+                                </select>
+                            </div>
+                            <div class="info-group">
+                                <label>İlçe</label>
+                                <select disabled>
+                                    <option>Kadıköy</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="bio-section">
+                            <label>Hakkımda</label>
+                            <textarea readonly>Güvenilir alış-veriş deneyimi sunan, uzun yıllardır platform kullanıcısı olan bir satıcıyım. Kaliteli ürünler ve hızlı teslimat önceliklerim.</textarea>
+                        </div>
+
+                        <div class="verification-section">
+                            <h3>Doğrulama Durumu</h3>
+                            <div class="verification-items">
+                                <div class="verification-item verified">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>E-posta Doğrulandı</span>
+                                </div>
+                                <div class="verification-item verified">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Telefon Doğrulandı</span>
+                                </div>
+                                <div class="verification-item pending">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Kimlik Doğrulama Bekliyor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- İlanlarım Sekmesi -->
+                    <div id="my-ads" class="tab-content">
+                        <div class="section-header">
+                            <h2>İlanlarım</h2>
+                            <button class="add-btn">
+                                <i class="fas fa-plus"></i>
+                                Yeni İlan Ekle
+                            </button>
+                        </div>
+
+                        <div class="ads-filter">
+                            <button class="filter-btn active">Tümü (45)</button>
+                            <button class="filter-btn">Aktif (12)</button>
+                            <button class="filter-btn">Pasif (8)</button>
+                            <button class="filter-btn">Süresi Dolmuş (25)</button>
+                        </div>
+
+                        <div class="ads-list">
+                            <!-- İlan örnekleri buraya gelecek -->
+                            <div class="ad-item">
+                                <img src="https://via.placeholder.com/100x100" alt="İlan Görseli">
+                                <div class="ad-details">
+                                    <h4>2019 Model Volkswagen Golf</h4>
+                                    <p class="ad-price">450.000 TL</p>
+                                    <p class="ad-location">İstanbul, Kadıköy</p>
+                                    <span class="ad-status active">Aktif</span>
+                                </div>
+                                <div class="ad-actions">
+                                    <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                                    <button class="action-btn stats"><i class="fas fa-chart-bar"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Diğer sekmeler için placeholder içerik -->
+                    <div id="favorites" class="tab-content">
+                        <h2>Favorilerim</h2>
+                        <p>Favori ilanlarınız burada görünecek.</p>
+                    </div>
+
+                    <div id="messages" class="tab-content">
+                        <h2>Mesajlarım</h2>
+                        <p>Mesajlarınız burada görünecek.</p>
+                    </div>
+
+                    <div id="reviews" class="tab-content">
+                        <h2>Değerlendirmeler</h2>
+                        <p>Size yapılan değerlendirmeler burada görünecek.</p>
+                    </div>
+
+                    <div id="settings" class="tab-content">
+                        <h2>Hesap Ayarları</h2>
+                        <p>Hesap ayarlarınız burada görünecek.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
